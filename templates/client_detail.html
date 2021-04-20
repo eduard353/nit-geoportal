@@ -1,0 +1,39 @@
+<style>
+    .wrapper {
+        font-size: 16px;
+        background-color: LightGray;
+        padding: 1em;
+        font-family: sans-serif;
+    }
+
+    .wrapper .title {
+        font-size: 1.5em;
+        text-decoration: underline;
+        text-align: center;
+    }
+
+    .wrapper .subtitle {
+        font-size: 1em;
+    }
+
+    .list-el + .list-el {
+        margin-top: .5em;
+    }
+
+    .list-el {
+        font-size: 1em;
+    }
+</style>
+<div class="wrapper">
+<h1 class="title">{{ client.full_name }}</h1>
+<h2 class="subtitle">Список оборудования:</h2>
+<ol class="list">
+{% for eq in equip %}
+        <li class="list-el">
+            {{ eq.name }} - {{ eq.inv_number }}
+        </li>
+
+
+    {% endfor %}
+</ol>
+</div>

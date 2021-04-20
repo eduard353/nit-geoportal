@@ -1,0 +1,5 @@
+/.idea
+/venv
+/nitmap/migrations
+/nitmap/__pycache__
+/newgeo/__pycache__
